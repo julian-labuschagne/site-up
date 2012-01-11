@@ -1,5 +1,7 @@
 #!/bin/bash
 
+URLS_FILE=./urls.txt
+
 function check_status() {
 	clear
 	echo "Checking site statuses ..."
@@ -21,7 +23,7 @@ function check_status() {
 			beep -e /dev/input/by-path/platform-pcspkr-event-spkr -f 800.7 -r 10 -d 200 -l 400
 		fi
 
-	done < urls.txt
+	done < $URLS_FILE
 
   echo
 	echo -n "Last checked: "
